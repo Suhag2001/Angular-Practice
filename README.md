@@ -1,2 +1,2 @@
 # angular-demo
-i am studing an angular 
+- i am studing an angular 
