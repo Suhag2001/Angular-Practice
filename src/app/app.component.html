@@ -8,3 +8,39 @@
 <h1> i am going to add the files</h1>
 
 <app-login></app-login>
+
+<button (click)="getName('Suhag Mohinkar')"> click</button>
+<br>
+<br>
+<br>
+<h1>Event Listener</h1>
+<input type="text" placeholder="keyup event" #box (keyup)="getData(box.value)"/>
+<br>
+<br>
+<input type="text" placeholder="keydown event" #box1 (keydown)="getData(box1.value)"/>
+<br>
+<br>
+<input type="text" placeholder="blur event" #box2 (blur)="getData(box2.value)"/>
+<br>
+<br>
+<input type="text" placeholder="input event" #box3 (input)="getData(box3.value)"/>
+<br><br>
+
+<h2 #head (mouseover)="getColor('hover')"> Hi Hover Mouse Over Events</h2>
+<h2 #head (mouseleave)="getColor('leave')"> Hi Leave Mouse Over Events</h2>
+
+<h1>get text Box values and print</h1>
+
+<input type="text" #box4  placeholder="Enter your thoughts">
+
+<br><br>
+<button (click)="printData(box4.value)">Click</button>
+<br><br>
+<p > your thoughts : {{storeData}}</p>
+
+<h1>Counter</h1>
+
+<button (click)="getCount('add')">++</button>
+<p>Count : {{Counter}}</p>
+<button (click)="getCount('minus')">- -</button>
+
