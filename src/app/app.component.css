@@ -1,7 +1,22 @@
-h1{
-    color: red;
-}
+
 
 h2:hover{
     color: green;
+}
+
+h2{
+    color: pink;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    border-radius: 2px;
+}
+.value{
+    /* border: 2px solid black; */
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 1px 1px 20px 1px black;
+    width:auto;
 }

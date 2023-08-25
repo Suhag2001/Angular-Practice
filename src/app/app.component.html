@@ -1,11 +1,21 @@
+<div class="center">
+    <div class="value">
+    <style>
+        h2{
+            color: darkblue;
+        }
+      
+        
+    </style>
+
 <h1>Hello {{title}}</h1>
 
 <app-nav></app-nav>
 
-<h1>hii  brother</h1>
+<h2  style="color: peru">hii  brother</h2>
 
 
-<h1> i am going to add the files</h1>
+<h2> i am going to add the files</h2>
 
 <app-login></app-login>
 
@@ -44,3 +54,74 @@
 <p>Count : {{Counter}}</p>
 <button (click)="getCount('minus')">- -</button>
 
+<h1>Property Binding and Interpolation</h1>
+
+<input type="text" name="input-text" value={{name}} disabled={{disable}} />
+<br><br>
+
+<input type="text" name="input-text" [value]=name [disabled]=disable/> 
+
+<h1> If - Else condition</h1>
+
+<h2 *ngIf="show; then elseBlock else ifBlock"></h2>
+
+<ng-template #ifBlock>
+    <h2>If Condition Means You have Clicked on True</h2>
+</ng-template>
+<ng-template #elseBlock>
+    <h2 > Else condition Means You have Clicked on False </h2>
+</ng-template>
+
+<button (click)="getFun()">{{show}}</button>
+
+
+<h1>Else-IF Conditions</h1>
+
+<ng-template [ngIf]="dudeColor=='red'">
+<h2 style="color: red;">Red Color</h2>
+</ng-template>
+<ng-template [ngIf]="dudeColor=='green'">
+<h2 style="color: green;">Green Color</h2>
+</ng-template>
+<ng-template [ngIf]="dudeColor=='yellow'">
+<h2 style="color: yellow;">Yellow Color</h2>
+</ng-template>
+<ng-template [ngIf]="dudeColor=='orange'">
+<h2 style="color: orange;">Orange Color</h2>
+</ng-template>
+
+<button (click)="getColors('red')">red</button>
+<button (click)="getColors('green')">green</button>
+<button (click)="getColors('yellow')">yellow</button>
+<button (click)="getColors('orange')">orange</button>
+<style>
+    button{
+        margin-right: 5px;
+    }
+</style>
+
+
+
+<h1>Switch Case</h1>
+<div  [ngSwitch]="Color">
+<h2 *ngSwitchCase="'red'" style="color: red;">Red Color</h2>
+<h2 *ngSwitchCase="'green'" style="color: green;">Green Color</h2>
+<h2 *ngSwitchCase="'blue'" style="color: blue;">Blue Color</h2>
+<h2 *ngSwitchCase="'peru'" style="color: peru;">Peru Color</h2>
+<h2 *ngSwitchCase style="color: black;">Peru Color</h2>
+</div>
+
+<button (click)="getColorsWithSwitch('red')">red</button>
+<button (click)="getColorsWithSwitch('green')">green</button>
+<button (click)="getColorsWithSwitch('blue')">blue</button>
+<button (click)="getColorsWithSwitch('peru')">peru</button>
+
+
+<h1>Lopping In Angular</h1>
+
+<p *ngFor="let item of users">{{item}}</p>
+
+<p *ngFor="let item of usersData">{{item.name}}-- {{item.email}}--{{item.phone}}</p>
+
+</div>
+</div>
