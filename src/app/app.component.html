@@ -44,7 +44,7 @@
 <input type="text" #box4  placeholder="Enter your thoughts">
 
 <br><br>
-<button (click)="printData(box4.value)">Click</button>
+<button ((click))="printData(box4.value)">Click</button>
 <br><br>
 <p > your thoughts : {{storeData}}</p>
 
@@ -117,11 +117,27 @@
 <button (click)="getColorsWithSwitch('peru')">peru</button>
 
 
-<h1>Lopping In Angular</h1>
+<h1>For Loop In Angular</h1>
 
 <p *ngFor="let item of users">{{item}}</p>
 
 <p *ngFor="let item of usersData">{{item.name}}-- {{item.email}}--{{item.phone}}</p>
 
+<h1>Nested For loop in angular</h1>
+<ul *ngFor="let user of Users">
+    <li>Name : {{user.name}}</li>
+    <li>email : {{user.email}}</li>
+    <li>phone : {{user.phone}}</li>
+    <ul *ngFor="let account of user.userAccounts">
+     <li>{{account}}</li>
+    </ul>
+
+</ul>
+
+
 </div>
 </div>
+
+
+
+

@@ -121,4 +121,41 @@ usersData=[
 }
 ]
 
+//Nested for loop
+
+Users=[
+  {
+    name:"pallavi0",
+    email:"pallavi@gmail.com0",
+    phone:"65986565245",
+    userAccounts:["facebook", "twitter", "paypal"]
+  },
+  {
+    name:"aman",
+    email:"aman@gmail.com0",
+    phone:"5656454654",
+    userAccounts:["facebook", "twitter", "paypal"]
+  }
+,
+{
+  name:"sakshi",
+  email:"sakshi@gmail.com0",
+  phone:"88986565644",
+  userAccounts:["instagram", "twitter", "paypal"]
+},
+{
+  name:"prachi",
+  email:"parachi@gmail.com0",
+  phone:"55656565654",
+  userAccounts:["telegram", "twitter", "paypal"]
+},
+{
+  name:"soman",
+  email:"somam@gmail.com0",
+  phone:"5656565665",
+  userAccounts:["linkedin", "twitter", "paypal"]
+}
+]
+
+
 }
