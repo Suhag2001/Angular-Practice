@@ -1,3 +1,6 @@
+
+<app-nav></app-nav>
+
 <div class="center">
     <div class="value">
     <style>
@@ -9,10 +12,23 @@
     </style>
 
 <h1>Hello {{title}}</h1>
+<div class="dropdown" data-bs-theme="dark">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonDark" data-bs-toggle="dropdown" aria-expanded="false">
+      Dark dropdown
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonDark">
+      <li><a class="dropdown-item active" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">Separated link</a></li>
+    </ul>
+  </div>
 
-<app-nav></app-nav>
 
-<h2  style="color: peru">hii  brother</h2>
+
+<h2 style="color: peru ">hii  brother</h2>
 
 
 <h2> i am going to add the files</h2>
@@ -103,6 +119,7 @@
 
 
 <h1>Switch Case</h1>
+
 <div  [ngSwitch]="Color">
 <h2 *ngSwitchCase="'red'" style="color: red;">Red Color</h2>
 <h2 *ngSwitchCase="'green'" style="color: green;">Green Color</h2>
@@ -131,11 +148,54 @@
     <ul *ngFor="let account of user.userAccounts">
      <li>{{account}}</li>
     </ul>
-
 </ul>
 
+<h1>Style Binding</h1>
+
+<p [style.color]="'green'">Suhag Mohinkar</p>
+<p [style.color]="color" [style.backgroundColor]="bgColor">Suhag Mohinkar</p>
+<p [style.color]="color" [style.backgroundColor]="bgColor">Software Developer</p>
+
+<button (click)="Onclick()">Change Color </button>
+<div>
+<h1>Basic Form</h1>
+
+<form #basicForm="ngForm" (ngSubmit)="getUserData(basicForm.value)">
+    <input type="text" ngModel name="user" placeholder="Enter Your Name " id="">
+   <br><br>
+    <input type="mail" ngModel name="email" placeholder="Enter Your Email " id="">
+    <br><br>
+    <input type="password" ngModel name="password" placeholder="Enter Your password " id="">
+    <br><br>
+   <input type="submit" value="submit">
+</form>
+
+<div *ngIf="userDisplay">
+    <ul>
+        <li>{{userData.user}}</li>
+        <li>{{userData.email}}</li>
+        <li>{{userData.password}}</li>
+    </ul>
+</div>
+</div>
+
+<div>
+    <h1>Toggle Element</h1>
+     
+    <button (click)="toggle()">Toggle</button>
+
+    <div *ngIf="display">I am From Toggle</div>
+    
+</div>
+
+<h1>Style by Angular Bootstrap</h1>
+<ng-template #tipContent>Hello, <b>{{name}}</b>!</ng-template>
+<button type="button" class="btn btn-outline-secondary" [ngbTooltip]="tipContent">
+	I've got markup and bindings in my tooltip!
+</button>
 
 </div>
+
 </div>
 
 

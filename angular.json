@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "day1": {
+    "suhag": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/day1",
+            "outputPath": "dist/suhag",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -60,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "day1:build:production"
+              "browserTarget": "suhag:build:production"
             },
             "development": {
-              "browserTarget": "day1:build:development"
+              "browserTarget": "suhag:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "day1:build"
+            "browserTarget": "suhag:build"
           }
         },
         "test": {
@@ -96,6 +97,6 @@
     }
   },
   "cli": {
-    "analytics": "db6ad63a-2874-459e-801b-a3689ac958f9"
+    "analytics": "51709ca7-3565-44bb-b7e6-5a6e71207ac8"
   }
 }

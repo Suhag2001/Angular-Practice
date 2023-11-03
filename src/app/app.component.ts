@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -50,7 +51,7 @@ export class AppComponent {
 
 
  //Else Codition
- dudeColor ="red";
+ dudeColor ="green";
 
  getColors(val){
   if(val=='red'){
@@ -66,7 +67,7 @@ export class AppComponent {
 
  //switch case
 
- Color = "red" ;
+ Color = "green" ;
  getColorsWithSwitch(val){
   switch(val){
     case "red":{
@@ -156,6 +157,33 @@ Users=[
   userAccounts:["linkedin", "twitter", "paypal"]
 }
 ]
+
+//style binding
+color="blue";
+bgColor="yellow";
+
+Onclick(){
+  this.color="white";
+  this.bgColor="blue";
+}
+
+//simple form 
+userDisplay: boolean= false;
+userData: any={};
+getUserData(data:NgForm){
+this.userData = data;
+console.log(data);
+this.userDisplay = true;
+}
+
+//toggle element 
+display : boolean = false;
+toggle(){
+   this.display = !this.display;
+}
+
+
+
 
 
 }
