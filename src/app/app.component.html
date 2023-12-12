@@ -2,29 +2,29 @@
 <app-nav></app-nav>
 
 <div class="center">
-    <div class="value">
-    <style>
-        h2{
-            color: darkblue;
-        }
+  <div class="value">
+  <style>
+      h2{
+          color: darkblue;
+      }
+    
       
-        
-    </style>
+  </style>
 
 <h1>Hello {{title}}</h1>
 <div class="dropdown" data-bs-theme="dark">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonDark" data-bs-toggle="dropdown" aria-expanded="false">
-      Dark dropdown
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonDark">
-      <li><a class="dropdown-item active" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
-      <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
-    </ul>
-  </div>
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonDark" data-bs-toggle="dropdown" aria-expanded="false">
+    Dark dropdown
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonDark">
+    <li><a class="dropdown-item active" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+</div>
 
 
 
@@ -82,10 +82,10 @@
 <h2 *ngIf="show; then elseBlock else ifBlock"></h2>
 
 <ng-template #ifBlock>
-    <h2>If Condition Means You have Clicked on True</h2>
+  <h2>If Condition Means You have Clicked on True</h2>
 </ng-template>
 <ng-template #elseBlock>
-    <h2 > Else condition Means You have Clicked on False </h2>
+  <h2 > Else condition Means You have Clicked on False </h2>
 </ng-template>
 
 <button (click)="getFun()">{{show}}</button>
@@ -111,9 +111,9 @@
 <button (click)="getColors('yellow')">yellow</button>
 <button (click)="getColors('orange')">orange</button>
 <style>
-    button{
-        margin-right: 5px;
-    }
+  button{
+      margin-right: 5px;
+  }
 </style>
 
 
@@ -142,12 +142,12 @@
 
 <h1>Nested For loop in angular</h1>
 <ul *ngFor="let user of Users">
-    <li>Name : {{user.name}}</li>
-    <li>email : {{user.email}}</li>
-    <li>phone : {{user.phone}}</li>
-    <ul *ngFor="let account of user.userAccounts">
-     <li>{{account}}</li>
-    </ul>
+  <li>Name : {{user.name}}</li>
+  <li>email : {{user.email}}</li>
+  <li>phone : {{user.phone}}</li>
+  <ul *ngFor="let account of user.userAccounts">
+   <li>{{account}}</li>
+  </ul>
 </ul>
 
 <h1>Style Binding</h1>
@@ -161,46 +161,288 @@
 <h1>Basic Form</h1>
 
 <form #basicForm="ngForm" (ngSubmit)="getUserData(basicForm.value)">
-    <input type="text" ngModel name="user" placeholder="Enter Your Name " id="">
-   <br><br>
-    <input type="mail" ngModel name="email" placeholder="Enter Your Email " id="">
-    <br><br>
-    <input type="password" ngModel name="password" placeholder="Enter Your password " id="">
-    <br><br>
-   <input type="submit" value="submit">
+  <input type="text" ngModel name="user" placeholder="Enter Your Name " id="">
+ <br><br>
+  <input type="mail" ngModel name="email" placeholder="Enter Your Email " id="">
+  <br><br>
+  <input type="password" ngModel name="password" placeholder="Enter Your password " id="">
+  <br><br>
+ <input type="submit" value="submit">
 </form>
 
 <div *ngIf="userDisplay">
-    <ul>
-        <li>{{userData.user}}</li>
-        <li>{{userData.email}}</li>
-        <li>{{userData.password}}</li>
-    </ul>
+  <ul>
+      <li>{{userData.user}}</li>
+      <li>{{userData.email}}</li>
+      <li>{{userData.password}}</li>
+  </ul>
 </div>
 </div>
 
 <div>
-    <h1>Toggle Element</h1>
-     
-    <button (click)="toggle()">Toggle</button>
+  <h1>Toggle Element</h1>
+   
+  <button (click)="toggle()">Toggle</button>
 
-    <div *ngIf="display">I am From Toggle</div>
-    
+  <div *ngIf="display">I am From Toggle</div>
+  
 </div>
 
 <h1>Style by Angular Bootstrap</h1>
 <ng-template #tipContent>Hello, <b>{{name}}</b>!</ng-template>
 <button type="button" class="btn btn-outline-secondary" [ngbTooltip]="tipContent">
-	I've got markup and bindings in my tooltip!
+I've got markup and bindings in my tooltip!
 </button>
 
-<h1>Material UI in angular</h1>
+<div>
+  <h1>Material UI in angular</h1>
 
-<div>New Things</div>
+  <div class="demo-section">
+      Button with a badge on the left
+      <button mat-raised-button color="primary"
+          matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+        Action
+      </button>
+    </div>
+
+    <section>
+      <div class="example-label">FAB</div>
+      <div class="example-button-row">
+        <div class="example-flex-container">
+          <div class="example-button-container">
+            <button mat-fab  color="primary" aria-label="Example icon button with a delete icon">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+          <div class="example-button-container">
+            <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
+              <mat-icon>bookmark</mat-icon>
+            </button>
+          </div>
+          <div class="example-button-container">
+            <button mat-fab color="warn" aria-label="Example icon button with a home icon">
+              <mat-icon>home</mat-icon>
+            </button>
+          </div>
+          <div class="example-button-container">
+            <button mat-fab disabled aria-label="Example icon button with a heart icon">
+              <mat-icon>favorite</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <mat-slide-toggle>Slide me!</mat-slide-toggle>
 </div>
 
+<div>
+<h1>ToDo List</h1>
+
+<div>
+  <input type="text" placeholder="Enter Student Name" #task>
+     <br><br>
+  <button (click)="addList(task.value)">Add Student</button>
+
+  <br><br>
+
+      <table>
+             <tr>
+              <th>Roll Number</th>
+              <th>Student Name</th>
+              <th>Remove</th>
+             </tr>
+             <tr  *ngFor="let data of list">
+              <td>{{data.id}}</td>
+              <td>{{data.name}}</td>
+              <td><button (click)="deleteStudent(data.id)">Remove</button></td>
+             </tr>
+      </table>
+
+</div>
+</div>
+
+<div>
+<h1>Send data Child to Parent Component</h1>
+  <app-child [item]="dataNumber" [name]="dataName"></app-child>
+
+  <button (click)="changeNumber()">Change Data</button>
+
+  <br> <br>
+  <ul *ngFor="let user of userList">
+    <app-child2 [data]="user"></app-child2>
+  </ul>
+</div>
+
+<div>
+<h1>Send data Parent to child component</h1>
+<app-child3 (updateDataEvent)="updateData($event)"></app-child3>
+<p>{{data}}</p>
+</div>
+
+<div>
+<h1>Two way binding</h1>
+<input type="text" [(ngModel)]="showData">
+<p>
+  {{showData}}</p>
+</div>
+
+<div>
+<h1>template reference variable</h1>
+
+<input type="text" #data name="" id="">
+<button (click)="functionCall(data.value)">Call Function</button>
 </div>
 
 
+<div><h1>Basic types of typescript in typescript file</h1></div>
+
+<div>
+<h1>Basic of pipes in angular</h1>
+
+<!-- verticle line is the pipe in angular  -->
+<p>{{pipe | uppercase}}</p>
+<p>{{pipe | lowercase}}</p>
+<p>{{date | date:"fullDate"}}</p>
+
+</div>
+
+
+<div>
+<h1>Advance Pipe</h1>
+<p>{{pipe | slice : 4 : 9 |uppercase}}</p>
+<p> {{c |json |uppercase}}</p>
+<p>{{2.3 |number : '2.5'}}</p>
+<p>{{20 | currency :'INR'}}</p>
+<p>{{20 | currency :'USD'}}</p>
+<p>{{"suhag" | titlecase }}</p>
+</div>
+
+
+<div>
+<h1>Custom Pipes</h1>
+ <p>{{rupees | currency :'USD'}}= {{rupees | usdInr }}</p>
+</div>
+
+<div>
+<h1>Form Introduction</h1>
+   <p>Use of Form </p>
+   <p>Two types of forms in angular</p>
+   <p>1.Template form and 2. reactive form</p>
+   <p>Data flow with forms </p>
+   <p>TEmplate -> Class -> Service -> Database</p>
+</div>
+
+<div>
+<h1>Template driven form </h1>
+ <!-- loginForm id is the template reffernce variable -->
+ <form #loginForm="ngForm" (ngSubmit)="userLogin(loginForm.value)" >
+  <input type="text"  placeholder="Enter your name " name="name" ngModel>
+  <br><br>
+  <input type="password" name="password" placeholder="enter Password" ngModel>
+  <br><br>
+  <button>Submit</button>
+ </form>
+
+ <button (click)="userLogin(loginForm.value)">Submit from outside Form</button>
+</div>
+
+<div>
+<h1>Reactive Form and validation</h1>
+<form [formGroup]="loginUserForm"    (ngSubmit)="loginUser()">
+  <input type="text" placeholder="Enter Your Name" name="user" formControlName="user">
+  <br>
+  <span style="color: red ;" *ngIf="user && user.invalid && user.touched">Please Enter User Name</span>
+  <br>
+  <input type="password" placeholder="Enter Your Password" name="password" formControlName="password">
+  <br>
+  <span style="color: red ;" *ngIf="password && password.invalid && password.touched">Please Enter Your Password</span>
+  <br>
+  <button [disabled]="loginUserForm.invalid">Submit</button>
+</form>
+</div>
+
+<div>
+<h1>Directives in angular</h1>
+<!-- ngIf is the directive  -->
+<p *ngIf="true">{{name}}</p>  
+<!-- we can create the user difine directive by using the command :- ng g directive directive/redClg -->
+<p appRedClg>{{name}}</p>
+<p appRedClg>{{name}}</p>
+<p appRedClg>{{name}}</p>
+</div>
+
+
+<div>
+ <h1>Services in Angular</h1>
+ <ul *ngFor="let user of datauserdata">
+  <li>{{user.name}} : {{user.age}}</li>
+</ul>
+</div>
+
+<div>
+  <h1>Api calling</h1>
+  <ul *ngFor="let product of productts">
+    <li>{{product.name}}   is a  {{product.category}}</li>
+  </ul>
+</div>
+
+<div>
+  <h1>Recap Module and Routing </h1>
+ <app-login></app-login>
+ <app-signup></app-signup>
+</div>
+<div>
+  <h1>Angular 10</h1>
+  <p>angular 10 is release on 25 june 2020</p>
+  <p>major updated are done in framework, material ui and cli also</p>
+  <p>strict mode </p>
+  <p>typscript 3.9</p>
+  <p>tsconfig.base.json</p>
+  <p>ESM 5 is removed</p>
+</div>
+
+<div>
+  <h1>Angular 11</h1>
+  <p>updated hot module replacement(HMR) (ng serve --hmr)
+  </p>
+  <p>typscript 4.0 support modu;e</p>
+  <p>webpack 5 support </p>
+  <p>moving to ESLint</p>
+  <p>upadated language service preview</p>
+  <p>some breaking changes : IE -9 </p>
+
+</div>
+
+<div>
+  <h1>Angular 12</h1>
+  <p>Moving closer to Ivy everwhere(view engine)</p>
+  <p>Transitioning from Legacy i18n Message IDs.</p>
+  <p>The Future of Protractor</p>
+  <p>Nullish Coalescing</p>
+  <p>Learning Angular</p>
+  <p>Stylish Improvements</p>
+  <p>Deprecating support for IE11</p>
+  <p>Some more minor changes</p>
+</div>
+
+<div>
+  <h1>Angular 13
+    <p>TypeScipt 4.4 support module</p>
+    <p>View Engine is no longer available</p>
+    <p>Node js older than 12.0 is no longer supported</p>
+    <p>Improvements to the angular CLI</p>
+    <p>Rxjs version updated</p>
+    <p>Validation Improvement</p>
+    <p>IE(internet explorer) 11 support being removed</p>
+    <p>Some more changes</p>
+  </h1>
+</div>
+
+
+</div>
+</div>
+
+<app-footer></app-footer>
 
 
